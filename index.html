@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="style.css" />
+  <body>
+    <!-- form section -->
+    <section class="inputSection">
+      <h1>Enter Details</h1>
+      <form action="">
+        Slack name * <br />
+        <input type="text" placeholder="Slack name" id="slack-name" />
+        <br />
+        Track * <br />
+        <select name="" id="my-track-input">
+          <option value="select">Select</option>
+          <option value="Frontend">Frontend</option>
+          <option value="Backend">Backend</option>
+          <option value="Mobile App Dev">Mobile App Dev</option></select
+        ><br />
+        Github URL <br /><input
+          type="url"
+          placeholder="Github Url"
+          id="github-url"
+        />
+        <br />
+        Upload Image <br /><input
+          type="file"
+          id="image-btn"
+          accept="image/jpg, image/jpeg, image/png"
+        />
+        <br />
+        <input type="submit" name="" id="submit-btn" />
+      </form>
+    </section>
+
+    <!-- display section -->
+    <section class="secondSection">
+      <div id="timeSection">
+        <div>
+          <p data-testid="currentDayOfTheWeek"></p>
+        </div>
+        <div>
+          <p data-testid="currentUTCTime"></p>
+        </div>
+      </div>
+      <header>
+        <h1>Personal Information</h1>
+      </header>
+      <main>
+        <div id="circle">
+          <div data-testid="slackDisplayImage"></div>
+        </div>
+        <div id="details">
+          <p>
+            Name:
+            <span data-testid="slackUserName"> </span>
+          </p>
+          <p>
+            Track:
+            <span data-testid="myTrack"></span>
+          </p>
+          <p id="githubField">
+            GitHub URL:
+            <a href="google.com" target="_blank" data-testid="githubURL"></a>
+          </p>
+        </div>
+      </main>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
